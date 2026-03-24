@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#header,
+#footer {
+    background-color: rgb(35, 81, 167);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+#header div,
+#footer div {
+    width: 30vw;
+}
+
+#header {
+    height: 13vh;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 7vh;
+    width: 100%;
+}
+
+#menu-main,
+#login-main,
+#signup-main {
+    height: 80vh;
+    overflow: auto;
+    background-color: ivory;
+}
+
+
+#login-form,
+#signup-form {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 40vw;
+    margin: 2rem auto;
+}
+
+#login-msg-container,
+#signup-msg-container {
+    width: 40vw;
+    margin: 1rem auto;
+}
+
+
+form input {
+    width: 100%;
+    border-radius: 5px;
+    margin: .5rem auto;
+    padding: .5rem;
+}
+
+#menu-msg-container {
+    width: 80vw;
+    max-width: 500px;
+    margin: 1rem auto 0 auto;
+    padding-left: 1.5rem;
+}
+
+#app-menu-ul {
+    background-color: lightgray;
+    width: 80vw;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    list-style: none;
+    max-width: 500px;
+}
+
+#app-menu-ul li {
+    background-color: rgb(35, 81, 167);
+    border-radius: 5px;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#app-menu-ul li:hover {
+    background-color: orange;
+    color: black;
+}
+
+#header-left button {
+    width: 15vw;
+    height: 4vh;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+#login-button,
+#signup-button {
+    display: block;
+    width: 15vw;
+    height: 4vh;
+    border-radius: 5px;
+    border: none;
+    margin: 1rem auto;
+}
+
+button:hover {
+    background-color: orange;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+}

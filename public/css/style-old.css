@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 2px solid gray;
+  cursor: pointer;
+}
+
+
+#header,
+#footer {
+  background-color: green;
+  padding: 3%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#header-left,
+#header-center,
+#header-right,
+#footer-left,
+#footer-center,
+#footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: ivory;
+}
+
+#header-left,
+#header-right {
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 25vw;
+}
+
+#header-right span {
+ font-weight: bold;
+}
+
+#header-center h1 {
+  font-size: 2.5rem;
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+#footer-center {
+  color: ivory;
+}
+
+#logout-btn,
+#to-health-check-btn {
+  display: block;
+  height: 2rem;
+  background-color: rgb(1, 189, 1);
+  text-align: center;
+  color: ivory;
+  border: none;
+  font-size: 1rem;
+  padding: 2%;
+}
+
+#to-main-portfolio,
+#logout-btn,
+#to-health-check-btn {
+  min-width: 15vw;
+  min-height: 5vh;
+  /* padding: 4%; */
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#to-main-portfolio:hover,
+#logout-btn:hover,
+#to-health-check-btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.7s ease-in-out;
+  background-color: orange;
+}
+
+#to-main-portfolio:active,
+#logout-btn:active {
+  background-color: darkgray;
+}
+
+
+#login-title,
+#signup-title,
+#app-menu-title {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#project-comment {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  color: yellow;
+}
+
+
+
+#app-menu-main {
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+#app-menu-msg-container {
+  /* background-color: lightgray; */
+  width: 100%;
+}
+
+
+#app-menu-msg {
+  margin-top: 1rem;
+  text-decoration: underline;
+  padding: 0.7rem 2rem;
+}
+
+
+#app-menu-ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto 1rem auto;
+  padding: 2%;
+}
+
+
+/* #app-menu-ul a { */
+#app-btn,
+#cv-app-btn {
+  text-decoration: none;
+  margin: 1rem auto;
+  /* background-color: burlywood; */
+  background-color: greenyellow;
+  height: 6vh;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px darkolivegreen;
+  padding: 2% 3%;
+}
+
+
+#app-btn:hover,
+#cv-app-btn:hover {
+  background-color: orange;
+}
+
+#app-menu-ul a:active {
+  position: relative;
+  top: 10px;
+  box-shadow: none;
+}
+
+
+#app-menu-ul p {
+  color: black;
+}
+
+#app-title {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+#app-summary {
+  text-align: left;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+
+
+#login-page-information,
+#signup-page-information {
+  width: 40%;
+  margin: 3rem auto -3rem auto;
+  /* font-size: 1.2rem; */
+  text-align: left;
+  /* color: red; */
+}
+
+#login-msg,
+#signup-msg {
+  /* font-weight: bold; */
+  text-decoration: underline;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+#msg-box p {
+  margin-bottom: 0.7rem;
+}
+
+#login-page-information ul,
+#signup-page-information ul {
+  padding-left: 2rem;
+  list-style: none;
+}
+
+
+/* LOGIN FORM */
+#login-form,
+#signup-form {
+  width: 60%;
+  max-width: 50vw;
+  margin: 3rem auto;
+  padding: 3%;
+  /* border: 1px solid black; */
+  height: 50vh;
+}
+
+#login-form input,
+#login-form p,
+#signup-form input,
+#signup-form p {
+  display: block;
+  margin: 0 auto;
+  height: 2rem;
+}
+
+#login-form button,
+#signup-form button {
+  display: block;
+  margin: 0 auto;
+  height: 3rem;
+  margin-top: 3rem;
+  width: 80.5%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#login-form button:hover,
+#signup-form button:hover {
+  background-color: orange;
+  border: none;
+}
+
+#login-form p,
+#signup-form p {
+  width: 80%;
+  margin-bottom: 0.5rem;
+}
+
+#login-form input,
+#signup-form input {
+  width: 80%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+
+
+/* #confirm-msg { */
+#msg-container {
+  width: 40%;
+  margin: 0 auto;
+}

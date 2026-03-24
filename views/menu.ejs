@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Menu</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+  </head>
+
+  <body>
+    <%- include("header"); %>
+
+    <div id="menu-main">
+      <ul id="menu-msg-container">
+        <li>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Please click an App button below to jump to the App.
+        </li>
+      </ul>
+
+      <ul id="app-menu-ul">
+        <a id="app-btn" href="http://localhost:5174">
+          <li>
+            <p id="app-summary">Recipe Management App</p>
+          </li>
+        </a>
+
+        <a id="app-btn"  href="http://localhost:7676">
+          <li>
+            <p id="app-summary">Task Management and Appointment App</p>
+          </li>
+        </a>
+        
+        <a id="app-btn"  href="http://localhost:7678">
+          <li>
+            <p id="app-summary">Codecademy Web Store</p>
+          </li>
+        </a>
+
+        <a id="app-btn"  href="http://localhost:5673">
+          <li>
+            <p id="app-summary">Music Search App</p>
+          </li>
+        </a>
+
+        <a id="app-btn"  href="http://localhost:5200">
+          <li>
+            <p id="app-summary">Chinese Restaurant App</p>
+          </li>
+        </a>
+      </ul>
+    </div>
+
+    <%- include('footer.ejs'); %>
+    
+    <script
+      src="https://kit.fontawesome.com/761de3f5c1.js"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

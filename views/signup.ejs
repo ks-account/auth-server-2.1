@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Page</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <%- include("header"); %>
+  
+  <div id="signup-main">
+    <div id="signup-msg-container">
+      <h3 id="signup-msg">Message:</h3>
+      <div id="msg-box"> 
+        <p id="confirm-msg">If you already have your user account, please <a href="/login">log in</a>.</p>
+        <p><%= locals.message %></p>
+      </div>
+    </div>
+
+    <form id="signup-form" action="/signup" method="post">
+      <p>USER NAME:</p>
+      <input type="text" name="username" placeholder="Username" required />
+      <p>EMAIL:</p>
+      <input type="email" name="email" placeholder="Email" required />
+      <p>PASSWORD:</p>
+      <input type="password" name="password" placeholder="Password" required />
+      <button id="signup-button" type="submit">Sing Up</button>
+    </form>
+  </div>
+
+  <%- include('footer.ejs'); %>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+</head>
+
+<body>
+    <div id="header">
+      <div id="header-left">
+        <% if(locals.isLogoutBtn) { %>
+          <form method='post' action='/logout'>
+            <button id="logout-btn" type="submit">Logout</button>
+          </form>
+        <% } %>
+        <% if(!locals.isLogoutBtn) { %>
+          <form method='post' action='/health-check-page'>
+            <button id="to-health-check-btn" type="submit">Health-Check Page</button>
+          </form>
+        <% } %>
+      </div>
+
+      <div id="header-center">
+        <h1 id="login-title"><%= locals.pageTitle %></h1>
+        <p>Ver. 2.1</p>
+        <!-- <p id="project-comment">This logIn, signup, manu page are built on the servider with ejs intentionally.</p> -->
+      </div>
+      
+      <div id="header-right">
+        <p><span>Current User: </span><%= locals.username %></p>
+      </div>
+    </div>
+</body>
+</html>
