@@ -7,8 +7,11 @@
 //     process.env.MUSIC_SEARCH_CLIENT_URL,
 //     process.env.CHINESE_REST_CLIENT_URL,
 //     process.env.HEALTH_CHECK_APP_URL,
+
+const { options } = require("../app")
+
 // ];
-const SELF_URL = 'https://auth-server-2-1.onrender.com/'
+const SELF_URL = 'https://auth-server-2-1.onrender.com'
 const RECIPE_CLIENT_URL = 'https://recipe-app-client-g01-0-9.netlify.app'
 const TASK_MGT_APP_URL = 'https://task-appoint-app-g01-0-9.netlify.app'
 const CV_APP_URL = 'https://cv-app-g01-0-9.onrender.com'
@@ -30,13 +33,21 @@ const allowedOrigins = [
 const corsOptions = {
     origin: function (origin, callback) {
         console.log("Current request origin: ", origin);
-        if (allowedOrigins.includes(origin) || !origin) {
+        // Allow requrests with no origin (like mobile apps or curl requests) to pass through
+        if (!origin) {
+            console.log("No origin detected in the request. This may be a same-origin request or a non-browser request.");
+            return callback(null, true);
+        }
+
+        // Check if the request origin is in the allowedOrigins list
+        if (allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
         }
     },
-    credentials: true
+    credentials: true,
+    optionsSuccessStatus: 200
 };
 
 
