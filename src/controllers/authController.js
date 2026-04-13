@@ -24,6 +24,7 @@ exports.login = async (req, res) => {
 
         // User info from DB
         const user = result.rows[0];
+        const email = user.email;
 
         // 3. Password check 
         const match = await bcrypt.compare(password, user.password);
@@ -34,7 +35,7 @@ exports.login = async (req, res) => {
 
         // 3. Generate JWT
         const token = jwt.sign(
-            { username },
+            { username, email },
             process.env.JWT_SECRET_KEY,
             { expiresIn: '1h'}
         );
@@ -97,4 +98,26 @@ exports.signup = async (req, res) => {
 exports.logout = (req, res) => {
     res.clearCookie('authToken');
     res.redirect('/login?Logged_out');
-}
+};
+
+
+
+exports.validateToken = async (req, res) => {
+  const token = req.cookies.authToken;
+  console.log("Token to validate: ", token);
+
+  if (!token) {
+    console.error("No token found!");
+    return res.status(401).json(false);
+  }
+
+  const jwt_key = process.env.JWT_SECRET_KEY;
+  jwt.verify(token, jwt_key, (err, decoded) => {
+    if (!decoded) {
+        console.log("Failed to token validation: ", err);
+        return res.status(401).json(false);
+    }
+    console.log("Decoded Token: ", decoded);
+    return res.status(200).json(decoded);
+  });
+};

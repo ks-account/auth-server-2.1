@@ -1,24 +1,14 @@
-const {    
-    selfURL,
-    recipeClientURL,
-    taskMgtURL,
-    cvURL,
-    codeyClientURL,
-    musicSearchURL,
-    chineseRestURL,
-    healthCheckApp } = require('./urlList');
-
-
 const allowedOrigins = [
-    selfURL,
-    recipeClientURL,
-    taskMgtURL,
-    cvURL,
-    codeyClientURL,
-    musicSearchURL,
-    chineseRestURL,
-    healthCheckApp,
+    process.env.SELF_URL,
+    process.env.RECIPE_CLIENT_URL,
+    process.env.TASK_MGT_APP_URL,
+    process.env.CV_APP_URL,
+    process.env.CODEY_CLIENT_URL,
+    process.env.MUSIC_SEARCH_CLIENT_URL,
+    process.env.CHINESE_REST_CLIENT_URL,
+    process.env.HEALTH_CHECK_APP_URL,
 ];
+
 
 
 const corsOptions = {
@@ -33,3 +23,4 @@ const corsOptions = {
 };
 
 
+module.exports = corsOptions;
