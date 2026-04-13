@@ -1,4 +1,5 @@
 exports.loginPage = (req, res) => {
+    console.log("This is the current server url saved in .env: ", process.env.SELF_URL);
     res.locals.pageTitle = "Login";
     res.render('login');
 };
