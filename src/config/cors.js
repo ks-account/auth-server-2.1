@@ -8,7 +8,7 @@
 //     process.env.CHINESE_REST_CLIENT_URL,
 //     process.env.HEALTH_CHECK_APP_URL,
 // ];
-const SELF_URL = 'https://auth-server-g01-0-9.onrender.com'
+const SELF_URL = 'https://auth-server-2-1.onrender.com/'
 const RECIPE_CLIENT_URL = 'https://recipe-app-client-g01-0-9.netlify.app'
 const TASK_MGT_APP_URL = 'https://task-appoint-app-g01-0-9.netlify.app'
 const CV_APP_URL = 'https://cv-app-g01-0-9.onrender.com'
